@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.leon.abfa">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature android:name="android.hardware.camera2.CameraDevice" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <application
+        android:name=".Infrastructure.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_"
+        android:label="@string/app_name"
+        android:largeHeap="false"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="DATABASE"
+            android:value="DB.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="18" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.app.leon.abfa.Models.DbTables" />
+
+        <!--<service-->
+        <!--android:name="org.acra.sender.SenderService"-->
+        <!--android:exported="false"-->
+        <!--android:process=":acra" />-->
+
+        <receiver
+            android:name=".StopBackgroundService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="STOP" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".BackgroundToziService"
+            android:exported="false" />
+
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ReportActivity"
+            android:label="@string/title_activity_report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UploadActivity"
+            android:label="@string/title_activity_upload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DownloadActivity"
+            android:label="@string/title_activity_download"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ReadActivity"
+            android:label="@string/title_activity_read"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activities.ReadSettingActivity"
+            android:label="@string/title_activity_read_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ReadReportActivity"
+            android:label="@string/title_activity_read_report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.TakePhotoActivity"
+            android:label="@string/title_activity_camera"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DescriptionActivity"
+            android:label="@string/title_activity_description"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ReportForbidActivity"
+            android:label="@string/title_activity_report_forbid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LocationActivity"
+            android:label="@string/title_activity_location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PrintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.BillActivity"
+            android:label="@string/title_activity_bill"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

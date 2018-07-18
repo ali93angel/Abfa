@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">قرائت کنتور آبفا</string>
+    <string name="action_settings">تنظیمات</string>
+    <string name="title_activity_home">خانه</string>
+    <string name="title_activity_upload">تخلیه اطلاعات</string>
+    <string name="title_activity_download">بارگیری اطلاعات</string>
+    <string name="title_activity_camera">دوربین</string>
+    <string name="title_activity_navigation">پیمایش</string>
+    <string name="title_activity_read">قرائت</string>
+    <string name="title_activity_setting">تنظیمات</string>
+    <string name="title_activity_read_setting">تنظیمات قرائت</string>
+    <string name="title_activity_report">گزارشات</string>
+    <string name="title_activity_location">موقعیت یابی</string>
+    <string name="title_activity_about">درباره ما</string>
+    <string name="title_activity_report_forbid">گزارش غیرمجاز</string>
+    <string name="title_activity_read_report">گزارش قرائت</string>
+    <string name="title_activity_description">ثبت توضیحات اشتراک</string>
+    <string name="title_activity_bill">توزیع قبض</string>
+    <string name="navigation_drawer_open">باز کردن منو</string>
+    <string name="navigation_drawer_close">بستن منو</string>
+
+    <string name="use_out_of_range">مصرف خارج از بازه</string>
+    <string name="counter_serial">سریال کنتور</string>
+    <string name="less_than_pre">رقم فعلی کمتر از رقم پیشین است.</string>
+    <string name="counter_empty">رقم کنتور وارد نشده است.</string>
+    <string name="download">بارگیری اطلاعات</string>
+    <string name="read">قرائت</string>
+    <string name="upload">تخلیه اطلاعات</string>
+    <string name="load">بارگیری</string>
+    <string name="reload">تخلیه</string>
+    <string name="reading_report">گزارش قرائت من</string>
+    <string name="reading_setting">تنظیمات قرائت</string>
+    <string name="help">درباره ما</string>
+    <string name="start">شروع</string>
+    <string name="end">پایان</string>
+    <string name="location">مکان یابی</string>
+    <string name="setting">تنظیمات برنامه</string>
+    <string name="setting_">تنظیمات</string>
+    <string name="setting_gps">تنظیمات جی پی اس</string>
+    <string name="gps_question">مکان یابی شما غیر فعال است ،آیا مایلید به قسمت تنظیمات مکان یابی منتقل شوید</string>
+    <string name="close_app">بستن برنامه</string>
+    <string name="bill">توزیع قبض</string>
+    <string name="exit">خروج</string>
+    <string name="submit">ثبت</string>
+    <string name="photo">عکس</string>
+    <string name="message">message</string>
+    <string name="no_eshterak_found">اشتراکی وجود ندارد</string>
+    <string name="side_bar">جهت باز کردن صفحه های جدید لطفا از نوار کنار استفاده فرمایید</string>
+    <string name="eshterak">اشتراک</string>
+    <string name="attention">توجه</string>
+    <string name="dear_user">همکار گرامی!</string>
+    <string name="loading_getting_info">ارتباط با سرویس دهنده</string>
+    <string name="loading_connecting">ارتباط با سرور</string>
+    <string name="contact_us">ارتباط با ما</string>
+    <string name="search">جستجو</string>
+    <string name="show_not_show_keyboard">نمایش / عدم نمایش صفحه کلید</string>
+    <string name="forbid">غیرمجاز</string>
+    <string name="navigation">پیمایش</string>
+    <string name="first_page">نمایش صفحه اول</string>
+    <string name="notes">ثبت توضیحات این اشتراک</string>
+    <string name="location_">موقعیت یابی</string>
+    <string name="username">نام کاربری</string>
+    <string name="password">گذرواژه</string>
+    <string name="login">ورود</string>
+    <string name="call_operator">"لطفا با راهبر سیستم تماس حاصل فرمایید"</string>
+    <string name="delete">حذف با موفقیت انجام شد</string>
+    <string name="force_close">مجوز ها کامل نیست</string>
+    <string name="permission_not_completed">بستن برنامه</string>
+    <string name="company_site">WWW.TPWW.IR</string>
+    <string name="theme_changed">تغییر پوسته با موفقیت انجام گرفت</string>
+    <string name="theme_change">تغییر پوسته</string>
+    <string name="file_downloaded">فایل برنامه دانلود شد، به مدیریت فایل مراجعه کنید</string>
+    <string name="copy_right">copyright 2017 by H.G.K co</string>
+    <string name="zero_use">مصرف صفر است. آیا اطمینان دارید؟</string>
+    <string name="high_use">رقم وارد شده بالاتر از میانگین بلند مدت است. آیا از رقم وارد شده اطمینان دارید؟</string>
+    <string name="low_use">رقم وارد شده پایین تر از میانگین بلند مدت است. آیا از رقم وارد شده اطمینان دارید؟</string>
+    <string name="not_found">یافت نشد</string>
+    <string name="description_sent">توضیحات ثبت شد</string>
+    <string name="accepted">OK</string>
+    <string name="report_forbid">گزارش غیر مجاز</string>
+    <string name="sign_description">ثبت توضیحات</string>
+    <string name="access">لطفا دسترسی تماس را به برنامه اضافه نمایید</string>
+    <string name="alal_percent">همکار گرامی درصد علی الحساب بالاتر از حد مجاز است</string>
+    <string name="stop_tozi_background_service">STOP</string>
+    <string name="tozing">در حال توزیع قبض</string>
+    <string name="tozi">توزیع قبض</string>
+    <string name="stop">توقف</string>
+    <string-array name="escape_sequences">
+        <item>Normal</item>
+        <item>Font A (12x24)</item>
+        <item>Font B (9x17)</item>
+        <item>Font C (9x24)</item>
+        <item>Left justify</item>
+        <item>Center</item>
+        <item>Right justify</item>
+        <item>Bold</item>
+        <item>Disabled bold</item>
+        <item>Underline</item>
+        <item>Disabled underline</item>
+        <item>Reverse video</item>
+        <item>Disabled reverse video</item>
+        <item>Single high and wide</item>
+        <item>Double wide</item>
+        <item>Double high</item>
+        <item>Double high and wide</item>
+        <item>Scale 1 time horizontally</item>
+        <item>Scale 2 times horizontally</item>
+        <item>Scale 3 times horizontally</item>
+        <item>Scale 4 times horizontally</item>
+        <item>Scale 5 times horizontally</item>
+        <item>Scale 6 times horizontally</item>
+        <item>Scale 7 times horizontally</item>
+        <item>Scale 8 times horizontally</item>
+        <item>Scale 1 time vertically</item>
+        <item>Scale 2 times vertically</item>
+        <item>Scale 3 times vertically</item>
+        <item>Scale 4 times vertically</item>
+        <item>Scale 5 times vertically</item>
+        <item>Scale 6 times vertically</item>
+        <item>Scale 7 times vertically</item>
+        <item>Scale 8 times vertically</item>
+    </string-array>
+
+    <string name="error">خطا</string>
+    <string name="error_empty">این فیلد باید پر شود.</string>
+    <string name="error_empty_all">همه فیلد ها خالی است.</string>
+    <string name="error_short_length">.این فیلد کوتاه است</string>
+    <string name="error_similar">شماره پرونده و شماره اشتراک مطابق نیستند.</string>
+    <string name="error_IO">خطا در جابجای اطلاعات، لطفا مجدد تلاش کنید</string>
+    <string name="error_Socket">خطادر ارتباط با سرور، لطفا تنظیمات شبکه خود را بررسی و مجدد تلاش کنید</string>
+    <string name="error_other">جهت ارتباط با پشتیبانی; علت خطا:</string>
+    <string name="error_disconnected">برقراری ارتباط حین جابجایی اطلاعات با خطا مواجه شد</string>
+    <string name="error_is_not_match">نام کاربری و گذرواژه با یکدیگر مطابقت ندارند</string>
+    <string name="error_passwords_is_not_match">گذرواژه و تکرار آن با یکدیکر مطابق نیستند</string>
+    <string name="error_in_record_voice">در ضبظ صدا مشکلی به وجود آمد</string>
+    <string name="error_in_play_voice">در پخش صدا مشکلی به وجود آمد</string>
+    <string name="error_in_format">فرمت وارد نشده نادرست است</string>
+    <string name="error_internal">خطای داخلی سرور، با پشتیبان تماس حاصل فرمایید</string>
+    <string name="error_input">ورودی های خود را چک کنید</string>
+    <string name="error_change_server">سرور در حال تغییرات است، لطفا منتظر بمانید و در صورت برطرف نشدن مشکل با پشتیبان تماس حاصل فرماید</string>
+    <string name="error_user_password">نام کاربری و گذرواژه در سیستم موجود نیست، لطفا در ورود اطلاعات دقت قرمایید</string>
+    <string name="error_not_update1">همکار گرامی لطفا نسخه به روز شده اپلیکیشن را از منوی تنظیمات  بخش به روز رسانی دریافت نمایید</string>
+    <string name="error_not_update2">همکار گرامی لطفا چهت دریافت آخرین نسخه اپلیکیشن با راهبر تماس حاصل فرمایید</string>
+    <string name="error_not_auth">مجوز های شما باطل شده است، از برنامه خارج و مجددا وارد شوید</string>
+</resources>

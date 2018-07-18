@@ -1,0 +1,91 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.leon.abfa.Fragments.KarbariGroupFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/low_padding"
+        android:background="@drawable/border_white_"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_mid_margin"
+            android:padding="@dimen/activity_mid_padding"
+            android:text="گروه کاربری"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/textSizeMedium"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"></Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="?attr/colorAccent" />
+
+        <TextView
+            style="@style/text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_mid_margin"
+            android:padding="@dimen/activity_mid_padding"
+            android:text="کاربری"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/textSizeMedium"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"></Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/buttonExit"
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_mid_margin"
+                android:layout_weight="1"
+                android:background="@drawable/border_red_"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="بستن"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeLarge_"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_mid_margin"
+                android:layout_weight="1"
+                android:background="@drawable/border_green_"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="ثبت"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeLarge_"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

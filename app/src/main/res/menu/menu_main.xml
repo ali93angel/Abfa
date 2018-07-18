@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/manhole_menu"
+            android:title="@string/manhole_persian"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/sewer_pipe_menu"
+            android:title="@string/sewer_pipe_persian"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/network_pipe_menu"
+            android:title="@string/network_pipe_persian"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/eshterak_block_menu"
+            android:title="@string/common_block_persian"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/street_menu"
+            android:title="@string/street_persian"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/parcel_menu"
+            android:title="@string/parcel_persian"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/counter_menu"
+            android:title="@string/counter_persian"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

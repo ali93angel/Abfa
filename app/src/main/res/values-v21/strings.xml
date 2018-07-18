@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">نرم افزار قرائت کنتور</string>
+
+    <string name="navigation_drawer_open">باز کردن منو</string>
+    <string name="navigation_drawer_close">بستن منو</string>
+
+    <string name="title_activity_display_view_pager">قرائت</string>
+    <string name="menu_item_report">گزارش فرعی</string>
+    <string name="menu_item_more_info">پیمایش</string>
+    <string name="menu_item_search">جستجو</string>
+    <string name="menu_item_lock_input">نمایش/عدم نمایش صفحه کلید</string>
+    <string name="menu_item_qeire_mojaz">غیر مجاز</string>
+    <string name="menu_item_flash_light">نور فلاش</string>
+    <string name="menue_item_contact_us">ارتباط با ما</string>
+    <string name="menue_item_display_last_unread">نمایش آخرین قرائت</string>
+    <string name="menue_item_bill_description">ثبت توضیحات این اشتراک</string>
+    <string name="menu_show_map">تمایش نقشه</string>
+
+    <string name="title_activity_startup">فرم ورودی</string>
+    <string name="title_activity_login">صفحه ورود</string>
+    <string name="title_activity_my_works_report">گزارش قرائت من</string>
+    <string name="title_activity_load"> بارگیری اطلاعات</string>
+    <string name="spinner_prompt">انتخاب کنید</string>
+    <string name="title_activity_off_load">تخلیه اطلاعات</string>
+    <string name="title_activity_setting">تنظیمات برنامه</string>
+    <string name="title_activity_reading_config">تنظیمات قرائت</string>
+
+    <string name="crash_toast_text">برنامه متوقف شد ، گزارش خطا به توسعه دهندگان این برنامه ارسال میشود تا هر چه سریعتر اشکال رفع شود</string>
+    <string name="crash_dialog_title">خطا در اجرای برنامه</string>
+    <string name="crash_dialog_text">همکار گرامی متاسفانه برنامه به دلیل اشکال متوقف شد. لطفا برای جلوگیری از تکرار این خطا در برنامه به ما کمک نمایید</string>
+    <string name="crash_dialog_comment_prompt">در صورتی که توضیحاتی در مورد اشکال اخیر میتوانید اضافه کنید:</string>
+    <string name="crash_dialog_ok_toast">با سپاس از شما</string>
+
+    <string name="theme_green_blue"> سبز-آبی</string>
+    <string name="theme_dark"> تیره</string>
+    <string name="theme_indigo">آبی پر رنگ</string>
+    <string name="theme_monochrome_1">مونوکروم 1</string>
+
+    //----------------------------------------------------------------- GIS
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <string name="tsw_boundary">http://81.90.148.22:6080/arcgis/rest/services/Urban_Features/Cities/MapServer</string>
+    //
+    //layers url
+    <string name="sewage_manhole">http://81.90.148.22:6080/arcgis/rest/services/Sewage_Features/Sewage_Manhole/MapServer</string>
+    <string name="sewage_pipe">http://81.90.148.22:6080/arcgis/rest/services/Sewage_Features/Sewage_Pipe/MapServer</string>
+    <string name="network_pipe">http://81.90.148.22:6080/arcgis/rest/services/Customers/Pipe_Service/MapServer</string>
+    <string name="eshterak_block">http://81.90.148.22:6080/arcgis/rest/services/Customers/Eshterak_Blocks/MapServer</string>
+    <string name="street">http://81.90.148.22:6080/arcgis/rest/services/Urban_Features/Street/MapServer</string>
+    <string name="parcel">http://81.90.148.22:6080/arcgis/rest/services/Customers/Parcel_Customers/MapServer</string>
+    //layers url
+
+    //service feature table url
+    <string name="manhole_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/Asbuilt_Manhole/MapServer/0</string>
+    <string name="sewer_pipe_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/Asbuilt_Sewer_Pipe/MapServer/0</string>
+    <string name="network_pipe_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/Network_Pipe/MapServer/0</string>
+    <string name="network_valve_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/Network_Valve/MapServer/0</string>
+    <string name="transmission_pipeline_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/Transmission_Pipeline/MapServer/0</string>
+    <string name="water_well_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/Water_Well/MapServer/0</string>
+    <string name="water_branch_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%D8%A7%D9%86%D8%B4%D8%B9%D8%A7%D8%A8_%D8%A2%D8%A8/MapServer/0</string>
+    <string name="common_block_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%D8%A8%D9%84%D9%88%DA%A9_%D9%87%D8%A7%DB%8C_%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%DA%A9%DB%8C_%D8%A2%D8%A8/MapServer/0</string>
+    <string name="network_line_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%D8%AE%D8%B7%D9%88%D8%B7_%D8%B4%D8%A8%DA%A9%D9%87_%D8%AA%D9%88%D8%B2%DB%8C%D8%B9/MapServer/0</string>
+    <string name="street_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86/MapServer/0</string>
+    <string name="town_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%D8%B4%D9%87%D8%B1%D9%87%D8%A7%DB%8C_%D8%AA%D8%AD%D8%AA_%D9%BE%D9%88%D8%B4%D8%B4/MapServer/0</string>
+    <string name="parcel_feature_service">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%D9%BE%D8%A7%D8%B1%D8%B3%D9%84/MapServer/0</string>
+    <string name="counter_feature_service_old">http://81.90.148.25:6080/arcgis/rest/services/ABFA_Data_Layers/%DA%A9%D9%86%D8%AA%D9%88%D8%B1_%D8%A2%D8%A8/MapServer/0</string>
+    <string name="counter_feature_service">http://81.90.148.22:6080/arcgis/rest/services/Customers/Water_Meter/FeatureServer/0</string>
+    //service feature table url
+
+    //layer name
+    <string name="manhole_persian">منهول</string>
+    <string name="sewer_pipe_persian">لوله فاضلاب</string>
+    <string name="network_pipe_persian">پایپ شبکه</string>
+    <string name="network_valve_persian">والو شبکه</string>
+    <string name="transmission_pipeline_persian">خطوط انتقال</string>
+    <string name="water_well_persian">چاه آب</string>
+    <string name="water_branch_persian">انشعاب آب</string>
+    <string name="common_block_persian">بلوک های اشتراکی</string>
+    <string name="network_line_persian">خطوط شبکه</string>
+    <string name="street_persian">خیابان</string>
+    <string name="town_persian">محدوده مناطق</string>
+    <string name="parcel_persian">پارسل</string>
+    <string name="counter_persian">کنتور</string>
+    //layer name
+    //---------------------------------------------------------------------- GIS
+    ------------------------------------------------------------------------------------------------------------------------
+    //
+    <string name="osm">OSM</string>
+    <string name="local_gis_basemap">نقشه واحد GIS</string>
+    //
+    // warnings
+    <string name="location_permission_denied"> بدلیل اشکال در مجوز دسترسی به مکان برنامه قادر به اجرا نخواهد بود</string>
+    //warnings End
+</resources>

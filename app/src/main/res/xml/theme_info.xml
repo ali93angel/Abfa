@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:defaultValue="1"
+        android:key="theme_stable"
+        android:summary="theme_stable"
+        android:title="theme_stable"></EditTextPreference>
+    <EditTextPreference
+        android:defaultValue=""
+        android:key="theme_temporary"
+        android:summary="theme_temporary"
+        android:title="theme_temporary"></EditTextPreference>
+</PreferenceScreen>

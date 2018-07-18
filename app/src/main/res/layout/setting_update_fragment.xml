@@ -1,0 +1,187 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark"
+    android:paddingLeft="@dimen/activity_large_padding"
+    android:paddingRight="@dimen/activity_large_padding"
+    tools:context="com.app.leon.abfa.Fragments.SettingUpdateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonReceive"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_large_margin"
+            android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_weight="1"
+            android:src="@drawable/img_update" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="تاریخ بروزرسانی:"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <TextView
+                android:id="@+id/textViewDate"
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:textSize="@dimen/textSizeSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="نسخه:"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <TextView
+                android:id="@+id/textViewVersion"
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:textSize="@dimen/textSizeSmall" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="حجم فایل:"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <TextView
+                android:id="@+id/textViewSize"
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:textSize="@dimen/textSizeSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="امکانات جدید:"
+                android:textSize="@dimen/textSizeSmall" />
+
+            <TextView
+                android:id="@+id/textViewPossibility"
+                style="@style/text_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_medium_margin"
+                android:layout_marginRight="@dimen/activity_medium_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_mid_padding"
+                android:textSize="@dimen/textSizeSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_large_margin"
+            android:layout_marginRight="@dimen/activity_large_margin">
+
+            <Button
+                android:id="@+id/buttonReceive"
+                style="@style/text_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_medium_margin"
+                android:layout_marginLeft="@dimen/activity_large_margin"
+                android:layout_marginRight="@dimen/activity_large_margin"
+                android:layout_marginTop="@dimen/activity_medium_margin"
+                android:background="@drawable/border_orange_"
+                android:text="دریافت فایل"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSizeLarge" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

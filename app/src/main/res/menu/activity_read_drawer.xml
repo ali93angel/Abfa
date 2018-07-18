@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_forbidden"
+            android:title="@string/forbid" />
+        <item
+            android:id="@+id/nav_scaling"
+            android:title="@string/navigation" />
+        <item
+            android:id="@+id/nav_show_last"
+            android:title="@string/first_page" />
+        <item
+            android:id="@+id/nav_show_keyboard"
+            android:title="@string/show_not_show_keyboard" />
+        <item
+            android:id="@+id/nav_connect"
+            android:title="@string/contact_us" />
+        <item
+            android:id="@+id/nav_comment"
+            android:title="@string/notes" />
+        <item
+            android:id="@+id/nav_location"
+            android:title="@string/location_" />
+    </group>
+
+
+</menu>

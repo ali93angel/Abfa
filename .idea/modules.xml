@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abfa.iml" filepath="$PROJECT_DIR$/Abfa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidutils-debug/androidutils-debug.iml" filepath="$PROJECT_DIR$/androidutils-debug/androidutils-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cameralibrary-debug/cameralibrary-debug.iml" filepath="$PROJECT_DIR$/cameralibrary-debug/cameralibrary-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dialogeapp-debug/dialogeapp-debug.iml" filepath="$PROJECT_DIR$/dialogeapp-debug/dialogeapp-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geotrackerlibrary-debug/geotrackerlibrary-debug.iml" filepath="$PROJECT_DIR$/geotrackerlibrary-debug/geotrackerlibrary-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpclientlibrary-debug/httpclientlibrary-debug.iml" filepath="$PROJECT_DIR$/httpclientlibrary-debug/httpclientlibrary-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recognitionactivitylibrary-debug/recognitionactivitylibrary-debug.iml" filepath="$PROJECT_DIR$/recognitionactivitylibrary-debug/recognitionactivitylibrary-debug.iml" />
+    </modules>
+  </component>
+</project>

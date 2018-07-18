@@ -1,0 +1,231 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark"
+    android:paddingLeft="@dimen/activity_large_padding"
+    android:paddingRight="@dimen/activity_large_padding"
+    tools:context="com.app.leon.abfa.Fragments.ReportTotalFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/activity_medium_margin"
+        android:layout_marginTop="@dimen/activity_medium_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_mid_margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="تعداد کل:" />
+
+            <TextView
+                android:id="@+id/textViewTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="@dimen/activity_mid_padding"
+                android:text="0" />
+        </LinearLayout>
+
+        <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pieChart"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_large_margin"
+            android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_weight="1"
+            app:egLegendTextSize="@dimen/textSizeMedium"
+            app:egUsePieRotation="true"
+            app:egValueTextSize="@dimen/textSizeMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_gray_"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/border_green_"
+                        android:padding="10dp"></LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="عادی:" />
+
+                    <TextView
+                        android:id="@+id/textViewStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutZero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/border_blue_"
+                        android:padding="10dp"></LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="صفر:" />
+
+                    <TextView
+                        android:id="@+id/textViewZero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="0" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/border_red_"
+                        android:padding="10dp"></LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="بالا:" />
+
+                    <TextView
+                        android:id="@+id/textViewHigh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/border_yellow_"
+                        android:padding="10dp"></LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="پایین:" />
+
+                    <TextView
+                        android:id="@+id/textViewLow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_medium_margin"
+                        android:layout_marginRight="@dimen/activity_medium_margin"
+                        android:layout_weight="1"
+                        android:padding="@dimen/activity_mid_padding"
+                        android:text="0" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,1 @@
+include ':app', ':cameralibrary-debug', ':geotrackerlibrary-debug', ':androidutils-debug', ':dialogeapp-debug', ':httpclientlibrary-debug', ':recognitionactivitylibrary-debug'
