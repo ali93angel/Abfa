@@ -26,9 +26,25 @@ public class CustomErrorHandling extends Exception {
     private int ErrorCode;
 
     public CustomErrorHandling(Context context) {
-        this.context = context;
+        CustomErrorHandling.context = context;
     }
 
+    public static APIError parseError(Response<?> response) {
+        try {
+            Converter<ResponseBody, APIError> converter =
+                    NetworkHelper.getInstance(true, "")
+                            .responseBodyConverter(APIError.class, new Annotation[0]);
+            APIError error;
+            error = converter.convert(response.errorBody());
+            return error;
+        } catch (IOException e) {
+            return new APIError();
+        } catch (JsonSyntaxException e) {
+            return new APIError();
+        } catch (Exception e) {
+            return new APIError();
+        }
+    }
 
     public String getErrorMessage(int httpResponseCode, ErrorHandlerType errorHandlerType) {
         if (errorHandlerType == ErrorHandlerType.login) {
@@ -87,23 +103,6 @@ public class CustomErrorHandling extends Exception {
             errorMessage = context.getString(R.string.error_not_update2);
         }
         return errorMessage;
-    }
-
-    public static APIError parseError(Response<?> response) {
-        try {
-            Converter<ResponseBody, APIError> converter =
-                    NetworkHelper.getInstance(true, "")
-                            .responseBodyConverter(APIError.class, new Annotation[0]);
-            APIError error;
-            error = converter.convert(response.errorBody());
-            return error;
-        } catch (IOException e) {
-            return new APIError();
-        } catch (JsonSyntaxException e) {
-            return new APIError();
-        } catch (Exception e) {
-            return new APIError();
-        }
     }
 
     public static class APIError {

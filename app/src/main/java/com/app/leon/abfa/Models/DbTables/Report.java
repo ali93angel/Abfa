@@ -17,7 +17,7 @@ public class Report extends SugarRecord {
     int trackNumber;
 
     public Report(CrReport crReport) {
-        setIdCustom(crReport.getId().toString());
+        setIdCustom(crReport.getId());
         setBillId(crReport.getBillId());
         setOffLoadState(OffloadStateEnum.INSERTED.getValue());
         setReportCode(crReport.getReportCode());

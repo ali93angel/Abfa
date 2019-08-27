@@ -5,15 +5,17 @@ package com.app.leon.abfa.Utils;
  */
 
 public final class Guard {
-    private Guard(){
+    private Guard() {
     }
+
     public static boolean isNullOrEmpty(String value) {
         if (value == null) {
             return true;
         }
-        return value.length()<1;
+        return value.length() < 1;
     }
-    public static boolean isNull(Object object){
-        return object==null;
+
+    public static boolean isNull(Object object) {
+        return object == null;
     }
 }

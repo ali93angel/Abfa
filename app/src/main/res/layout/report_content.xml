@@ -29,8 +29,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/border_white_"
                 android:gravity="center"
-                android:paddingBottom="@dimen/activity_medium_padding"
                 android:paddingTop="@dimen/activity_medium_padding"
+                android:paddingBottom="@dimen/activity_medium_padding"
                 android:text="آمار کلی"
                 android:textColor="@color/black1" />
 
@@ -42,8 +42,8 @@
                 android:layout_margin="@dimen/activity_mid_margin"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:paddingBottom="@dimen/activity_medium_padding"
                 android:paddingTop="@dimen/activity_medium_padding"
+                android:paddingBottom="@dimen/activity_medium_padding"
                 android:text="قرائت نشده"
                 android:textColor="@color/white" />
 
@@ -56,8 +56,8 @@
                 android:layout_margin="@dimen/activity_mid_margin"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:paddingBottom="@dimen/activity_medium_padding"
                 android:paddingTop="@dimen/activity_medium_padding"
+                android:paddingBottom="@dimen/activity_medium_padding"
                 android:text="علی الحساب"
                 android:textColor="@color/white" />
 

@@ -2,13 +2,14 @@ package com.app.leon.abfa.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.app.leon.abfa.Activities.ReadReportActivity;
 import com.app.leon.abfa.R;
@@ -75,7 +76,7 @@ public class TaviziFragment extends DialogFragment {
     }
 
     void initialize() {
-        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.fragmentFrameLayout);
+        FrameLayout frameLayout = view.findViewById(R.id.fragmentFrameLayout);
         FontManager fontManager = new FontManager(getActivity());
         fontManager.setFont(frameLayout);
         setButtonSubmitOnClickListener();

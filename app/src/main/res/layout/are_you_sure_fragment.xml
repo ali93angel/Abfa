@@ -19,12 +19,12 @@
             android:background="?attr/colorAccent" />
 
         <TextView
+            android:id="@+id/textViewAreYouSure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_mid_margin"
             android:gravity="center"
             android:padding="@dimen/activity_medium_padding"
-            android:id="@+id/textViewAreYouSure"
             android:textColor="@color/black"
             android:textSize="@dimen/textSizeLarge_" />
 

@@ -3,12 +3,12 @@ package com.app.leon.abfa.Activities;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.leon.abfa.Adapters.ViewPagerAdapterTab;
 import com.app.leon.abfa.BaseItem.BaseActivity;
@@ -26,6 +26,7 @@ import com.app.leon.abfa.Models.ViewModels.UiElementInActivity;
 import com.app.leon.abfa.R;
 import com.app.leon.abfa.Utils.DepthPageTransformer;
 import com.app.leon.abfa.Utils.SharedPreferenceManager;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,6 @@ public class UploadActivity extends BaseActivity {
     public List<MultimediaData> multimediaDatas = new ArrayList<>();
     public List<OnOffLoad> onOffLoads = new ArrayList<>();
     Context context;
-    private SharedPreferenceManager sharedPreferenceManager;
     @BindView(R.id.textViewUpload)
     TextView textViewUpload;
     @BindView(R.id.textViewUploadOff)
@@ -56,6 +56,7 @@ public class UploadActivity extends BaseActivity {
     TextView textViewFooter;
     @BindView(R.id.pager)
     ViewPager viewPager;
+    private SharedPreferenceManager sharedPreferenceManager;
 
     @Override
     protected UiElementInActivity getUiElementsInActivity() {
@@ -71,7 +72,7 @@ public class UploadActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

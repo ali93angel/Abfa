@@ -1,8 +1,6 @@
 package com.app.leon.abfa.Adapters;
 
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.app.leon.abfa.Infrastructure.Counting;
 import com.app.leon.abfa.Models.DbTables.Karbari;
@@ -88,20 +89,20 @@ public class ViewPagerAdapterRead extends PagerAdapter {
         public Spinner spinner;
 
         public MainViewPagerHolder(View view) {
-            textViewPreNumber = (TextView) view.findViewById(R.id.textViewPreNumber);
-            textViewPreDate = (TextView) view.findViewById(R.id.textViewPreDate);
-            textViewBranch = (TextView) view.findViewById(R.id.textViewBranch);
-            textViewSerial = (TextView) view.findViewById(R.id.textViewSerial);
-            textViewSiphon = (TextView) view.findViewById(R.id.textViewSiphon);
-            textViewAhadMasraf = (TextView) view.findViewById(R.id.textViewAhadMasraf);
-            textViewRadif = (TextView) view.findViewById(R.id.textViewRadif);
-            textViewAhadAsli = (TextView) view.findViewById(R.id.textViewAhadAsli);
-            textViewName = (TextView) view.findViewById(R.id.textViewName);
-            textViewAhadForosh = (TextView) view.findViewById(R.id.textViewAhadForosh);
-            textViewKarbari = (TextView) view.findViewById(R.id.textViewKarbari);
-            textViewCode = (TextView) view.findViewById(R.id.textViewCode);
-            expandableTextView = (ExpandableTextView) view.findViewById(R.id.expandableTextViewAddress);
-            spinner = (Spinner) view.findViewById(R.id.spinner);
+            textViewPreNumber = view.findViewById(R.id.textViewPreNumber);
+            textViewPreDate = view.findViewById(R.id.textViewPreDate);
+            textViewBranch = view.findViewById(R.id.textViewBranch);
+            textViewSerial = view.findViewById(R.id.textViewSerial);
+            textViewSiphon = view.findViewById(R.id.textViewSiphon);
+            textViewAhadMasraf = view.findViewById(R.id.textViewAhadMasraf);
+            textViewRadif = view.findViewById(R.id.textViewRadif);
+            textViewAhadAsli = view.findViewById(R.id.textViewAhadAsli);
+            textViewName = view.findViewById(R.id.textViewName);
+            textViewAhadForosh = view.findViewById(R.id.textViewAhadForosh);
+            textViewKarbari = view.findViewById(R.id.textViewKarbari);
+            textViewCode = view.findViewById(R.id.textViewCode);
+            expandableTextView = view.findViewById(R.id.expandableTextViewAddress);
+            spinner = view.findViewById(R.id.spinner);
         }
 
         public void SetTextAndConfig(OnOffLoad onOffLoad, List<ReadingConfig> readingConfigs,

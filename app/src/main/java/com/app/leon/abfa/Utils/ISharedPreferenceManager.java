@@ -5,8 +5,11 @@ package com.app.leon.abfa.Utils;
  */
 
 public interface ISharedPreferenceManager {
-    <T1,T2> T2 get(T1 key);
+    <T1, T2> T2 get(T1 key);
+
     <T> void put(T key, T value);
+
     void apply();
+
     boolean CheckIsNotEmpty(String key);
 }

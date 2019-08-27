@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -17,6 +15,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.app.leon.abfa.Infrastructure.DifferentCompanyManager;
 import com.app.leon.abfa.Infrastructure.IAbfaService;
@@ -48,13 +49,6 @@ import static com.app.leon.abfa.Infrastructure.DifferentCompanyManager.getActive
 
 public class LoginActivity extends AppCompatActivity {
     final int ALLOWED_FAILURE_COUNT = 3;
-    private ISharedPreferenceManager sharedPreferenceManager;
-    private String username, password, deviceId;
-    private ConnectingManager connectingManager;
-    private View viewFocus;
-    private Context context;
-    private int failureCount = 0;
-    private FontManager fontManager;
     @BindView(R.id.editTextUsername)
     EditText editTextUsername;
     @BindView(R.id.editTextPassword)
@@ -77,7 +71,13 @@ public class LoginActivity extends AppCompatActivity {
     ImageView imageViewUsername;
     @BindView(R.id.imageViewPassword)
     ImageView imageViewPassword;
-
+    private ISharedPreferenceManager sharedPreferenceManager;
+    private String username, password, deviceId;
+    private ConnectingManager connectingManager;
+    private View viewFocus;
+    private Context context;
+    private int failureCount = 0;
+    private FontManager fontManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -300,19 +300,13 @@ public class LoginActivity extends AppCompatActivity {
         if (token.length() < 20) {
             return false;
         }
-        if (sharedPreferenceManager.get(SharedReferenceKeys.REFRESH_TOKEN.getValue()).toString().length() < 20) {
-            return false;
-        }
-        return true;
+        return sharedPreferenceManager.get(SharedReferenceKeys.REFRESH_TOKEN.getValue()).toString().length() >= 20;
     }
 
     private boolean checkLastCredential(String enteredUsername, String enteredPassword) {
         String username = sharedPreferenceManager.get(SharedReferenceKeys.USERNAME.getValue());
         String password = Crypto.decrypt(sharedPreferenceManager.get(SharedReferenceKeys.PASSWORD.getValue()).toString());
-        if (username.equals(enteredUsername) && password.equals(enteredPassword)) {
-            return true;
-        }
-        return false;
+        return username.equals(enteredUsername) && password.equals(enteredPassword);
     }
 
     @Override

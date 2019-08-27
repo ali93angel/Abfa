@@ -35,8 +35,8 @@ import static com.app.leon.abfa.Activities.ReadActivity.focusOnEditText;
 import static com.app.leon.abfa.Activities.ReadActivity.showSerialBox;
 
 public class ReadFragment extends BaseFragment {
-    Context context;
     public static OnOffLoad onOffLoad;
+    Context context;
     int counterStatePosition;
     int counterStateCode;
     int number;
@@ -99,6 +99,7 @@ public class ReadFragment extends BaseFragment {
         }
         return view;
     }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();

@@ -198,6 +198,7 @@ public class HomeActivity extends BaseActivity {
                 getApplicationContext().getString(R.string.force_close));
         finishAffinity();
     }
+
     public boolean CheckIsNotEmpty() {
         SharedPreferenceManager sharedPreferenceManager = new SharedPreferenceManager(
                 getApplicationContext());
@@ -207,9 +208,8 @@ public class HomeActivity extends BaseActivity {
             return false;
         else if (!sharedPreferenceManager.CheckIsNotEmpty(SharedReferenceKeys.TOKEN.getValue()))
             return false;
-        else if (!sharedPreferenceManager.CheckIsNotEmpty(SharedReferenceKeys.REFRESH_TOKEN.getValue()))
-            return false;
-        return true;
+        else
+            return sharedPreferenceManager.CheckIsNotEmpty(SharedReferenceKeys.REFRESH_TOKEN.getValue());
     }
 
 }

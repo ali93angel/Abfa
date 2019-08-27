@@ -1,4 +1,5 @@
 package com.app.leon.abfa.Fragments;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
@@ -6,8 +7,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +18,9 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.DialogFragment;
 
 import com.app.leon.abfa.R;
 import com.app.leon.abfa.Utils.FontManager;
@@ -82,7 +84,7 @@ public class ContactUsFragment extends DialogFragment {
     }
 
     public void initialize() {
-        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.fragmentFrameLayout);
+        FrameLayout frameLayout = view.findViewById(R.id.fragmentFrameLayout);
         FontManager fontManager = new FontManager(getActivity());
         fontManager.setFont(frameLayout);
         buttonExit.setOnClickListener(new View.OnClickListener() {

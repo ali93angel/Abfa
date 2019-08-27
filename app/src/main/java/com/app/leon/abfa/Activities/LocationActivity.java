@@ -7,12 +7,13 @@ import android.content.Intent;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.leon.abfa.Adapters.ViewPagerAdapterTab;
 import com.app.leon.abfa.Fragments.LocationFragment;
@@ -34,6 +35,7 @@ import static com.app.leon.abfa.Infrastructure.BuildTypeManager.isGisBuild;
 
 public class LocationActivity extends AppCompatActivity {
     public static String theme = "1";
+    public OnOffLoad onOffLoad;
     ISharedPreferenceManager sharedPreferenceManager;
     Context context;
     @BindView(R.id.location_activity)
@@ -44,7 +46,6 @@ public class LocationActivity extends AppCompatActivity {
     TextView textViewPlace;
     @BindView(R.id.pager)
     ViewPager viewPager;
-    public OnOffLoad onOffLoad;
     FontManager fontManager;
 
     @Override

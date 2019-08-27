@@ -6,7 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.os.IBinder;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.leon.abfa.Activities.BillActivity;
 import com.app.leon.abfa.Infrastructure.IAbfaService;
@@ -29,11 +30,11 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 
 public class BackgroundToziService extends Service {
+    public static int counter;
     public Context context = this;
+    SendLocation sendLocation;
     private IGeoTracker geoTracker;
     private ISharedPreferenceManager sharedPreferenceManager;
-    public static int counter;
-    SendLocation sendLocation;
 
     @Override
     public IBinder onBind(Intent intent) {

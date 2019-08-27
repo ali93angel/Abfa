@@ -7,10 +7,14 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class AppInfo {
-    @SerializedName("description ") String description;
-    @SerializedName("fileSizeBytes") String fileSizeBytes;
-    @SerializedName("insertDateJalali") String insertDateJalali;
-    @SerializedName("versionName") String versionName;
+    @SerializedName("description ")
+    String description;
+    @SerializedName("fileSizeBytes")
+    String fileSizeBytes;
+    @SerializedName("insertDateJalali")
+    String insertDateJalali;
+    @SerializedName("versionName")
+    String versionName;
 
     public AppInfo(String description, String fileSizeBytes, String insertDateJalali, String versionName) {
         this.description = description;

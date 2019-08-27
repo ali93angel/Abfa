@@ -3,7 +3,6 @@ package com.app.leon.abfa.Fragments;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.app.leon.abfa.Activities.LocationActivity;
 import com.app.leon.abfa.Adapters.SpinnerGisAdapter;
@@ -58,9 +59,9 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 public class LocationFragment extends Fragment {
+    private final double SCALE = 700;
     Unbinder unbinder;
     Context context;
-    private final double SCALE = 700;
     @BindView(R.id.baseMapSpinner)
     Spinner baseMapSpinner;
     @BindView(R.id.mapNavigationSpinner)
@@ -221,8 +222,8 @@ public class LocationFragment extends Fragment {
         parcelLayer = new ArcGISTiledLayer(getString(R.string.parcel));
 
         counterLayer = new FeatureLayer(counterFeatureTable);
-        ((FeatureLayer) counterLayer).setSelectionColor(Color.CYAN);
-        ((FeatureLayer) counterLayer).setSelectionWidth(6);
+        counterLayer.setSelectionColor(Color.CYAN);
+        counterLayer.setSelectionWidth(6);
     }
 
     private void addSubLayers() {
@@ -422,7 +423,7 @@ public class LocationFragment extends Fragment {
 
     //
     private void initializeChangeBaseMapSpinner(View rootView) {
-        baseMapSpinner = (Spinner) rootView.findViewById(R.id.baseMapSpinner);
+        baseMapSpinner = rootView.findViewById(R.id.baseMapSpinner);
         addBaseMapGisSpinner();
     }
 

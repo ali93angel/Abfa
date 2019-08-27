@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_mid_padding"
-        android:paddingTop="@dimen/activity_mid_padding">
+        android:paddingTop="@dimen/activity_mid_padding"
+        android:paddingBottom="@dimen/activity_mid_padding">
 
         <ImageView
             android:id="@id/ld_icon"
@@ -53,34 +53,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
         android:layout_gravity="right"
+        android:gravity="right"
         android:orientation="horizontal">
-
 
 
         <Button
             android:id="@+id/ld_btn_no"
-            android:text="aaaaaaaaaaaaa"
             style="?android:borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="aaaaaaaaaaaaa"
             android:visibility="gone" />
 
         <Button
             android:id="@+id/ld_btn_neutral"
             style="?android:borderlessButtonStyle"
-            android:text="sssssssssssssss"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="sssssssssssssss"
             android:visibility="gone" />
 
         <Button
             android:id="@+id/ld_btn_yes"
-            android:layout_gravity="right"
             style="?android:borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:layout_margin="@dimen/activity_mid_margin"
             android:visibility="visible" />
     </LinearLayout>

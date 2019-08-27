@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +14,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.app.leon.abfa.DBService.KarbariGroupService;
 import com.app.leon.abfa.DBService.KarbariService;
@@ -86,7 +87,7 @@ public class KarbariGroupFragment extends DialogFragment {
     }
 
     public void initialize() {
-        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.fragmentFrameLayout);
+        FrameLayout frameLayout = view.findViewById(R.id.fragmentFrameLayout);
         FontManager fontManager = new FontManager(getActivity());
         fontManager.setFont(frameLayout);
         buttonExit.setOnClickListener(new View.OnClickListener() {

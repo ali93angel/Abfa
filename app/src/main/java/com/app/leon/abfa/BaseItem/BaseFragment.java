@@ -3,7 +3,6 @@ package com.app.leon.abfa.BaseItem;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.app.leon.abfa.R;
 
@@ -27,7 +28,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         view = FragmentView(inflater, parent, savedInstanceState);
         typeface = Typeface.createFromAsset(getActivity().getAssets(), "font/BYekan_3.ttf");
-        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.fragmentFrameLayout);
+        FrameLayout frameLayout = view.findViewById(R.id.fragmentFrameLayout);
         context = getActivity();
         setFont(frameLayout, typeface);
         initialize();

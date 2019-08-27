@@ -2,7 +2,6 @@ package com.app.leon.abfa.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.app.leon.abfa.R;
 
@@ -63,8 +64,8 @@ public class NavigationCustomAdapter extends ArrayAdapter<NavigationCustomAdapte
         if (position == 0) {
             drawerHolder = new DrawerItemHolder();
             convertView = inflater.inflate(R.layout.item_navigation_, parent, false);
-            drawerHolder.imageViewIcon = (ImageView) convertView.findViewById(R.id.imageViewIcon);
-            dItem = (DrawerItem) this.drawerItemList.get(position);
+            drawerHolder.imageViewIcon = convertView.findViewById(R.id.imageViewIcon);
+            dItem = this.drawerItemList.get(position);
             drawerHolder.imageViewIcon.setImageDrawable(convertView.getResources().getDrawable(
                     dItem.getImgResID()));
 //            drawerHolder.linear = (LinearLayout) convertView.findViewById(R.id.linear);
@@ -86,12 +87,12 @@ public class NavigationCustomAdapter extends ArrayAdapter<NavigationCustomAdapte
             convertView = inflater.inflate(layoutResID, parent, false);
             if (position == 5)
                 convertView = inflater.inflate(R.layout.item_navigation__, parent, false);
-            drawerHolder.textViewTitle = (TextView) convertView
+            drawerHolder.textViewTitle = convertView
                     .findViewById(R.id.textViewTitle);
             if (position == 9)
                 drawerHolder.textViewTitle.setTextColor(context.getResources().getColor(R.color.red4));
-            drawerHolder.imageViewIcon = (ImageView) convertView.findViewById(R.id.imageViewIcon);
-            dItem = (DrawerItem) this.drawerItemList.get(position);
+            drawerHolder.imageViewIcon = convertView.findViewById(R.id.imageViewIcon);
+            dItem = this.drawerItemList.get(position);
             drawerHolder.imageViewIcon.setImageDrawable(convertView.getResources().getDrawable(
                     dItem.getImgResID()));
             drawerHolder.textViewTitle.setText(dItem.getItemName());

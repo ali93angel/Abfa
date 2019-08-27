@@ -9,7 +9,7 @@
         <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
     </style>
 
-       <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:textColor">@color/red1</item>

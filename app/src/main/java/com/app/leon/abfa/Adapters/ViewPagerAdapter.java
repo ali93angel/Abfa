@@ -1,11 +1,12 @@
 package com.app.leon.abfa.Adapters;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.app.leon.abfa.Fragments.ReadFragment;
 import com.app.leon.abfa.Models.DbTables.OnOffLoad;
@@ -17,8 +18,8 @@ import java.util.List;
  */
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-    private final List<OnOffLoad> onOffLoads;
     static int position;
+    private final List<OnOffLoad> onOffLoads;
     private final Context context;
     List<Integer> spinnerItemSelected;
 
@@ -29,6 +30,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         this.spinnerItemSelected = spinnerItemSelected;
     }
 
+    public static int getPosition() {
+        return position;
+    }
+
     @Override
     public Fragment getItem(int position) {
         return ReadFragment.newInstance(onOffLoads.get(position), position, spinnerItemSelected.get(position));
@@ -36,10 +41,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 //            return ReadFragment.newInstance(onOffLoads.get(position), position, spinnerItemSelected.get(position));
 //        else
 //            return ReadFragment_.newInstance(onOffLoads.get(position), position, spinnerItemSelected.get(position));
-    }
-
-    public static int getPosition() {
-        return position;
     }
 
     @Override

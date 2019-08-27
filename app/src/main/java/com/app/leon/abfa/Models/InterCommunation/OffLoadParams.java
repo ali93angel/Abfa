@@ -42,6 +42,7 @@ public class OffLoadParams {
     public Integer d2;
     public Integer l1;
     public Integer l2;
+
     public OffLoadParams() {
     }
 }

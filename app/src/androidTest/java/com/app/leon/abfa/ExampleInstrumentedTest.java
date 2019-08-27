@@ -20,7 +20,7 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-Integer.TYPE
+        Integer.TYPE
         assertEquals("com.app.leon.abfa", appContext.getPackageName());
     }
 }

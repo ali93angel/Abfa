@@ -6,12 +6,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.InflateException;
@@ -27,6 +21,12 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.app.leon.abfa.Activities.AboutActivity;
 import com.app.leon.abfa.Activities.BillActivity;
 import com.app.leon.abfa.Activities.DownloadActivity;
@@ -39,6 +39,7 @@ import com.app.leon.abfa.Adapters.NavigationCustomAdapter;
 import com.app.leon.abfa.Models.ViewModels.UiElementInActivity;
 import com.app.leon.abfa.R;
 import com.app.leon.abfa.Utils.FontManager;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,10 +50,10 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Typeface typeface;
     public DrawerLayout drawer;
     @BindView(R.id.toolbar)
     public Toolbar toolbar;
+    Typeface typeface;
     NavigationCustomAdapter adapter;
     List<NavigationCustomAdapter.DrawerItem> dataList;
     private ListView drawerList;
@@ -132,7 +133,7 @@ public abstract class BaseActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -237,7 +238,7 @@ public abstract class BaseActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -247,10 +248,10 @@ public abstract class BaseActivity extends AppCompatActivity
         ButterKnife.bind(this);
 
         //toolbar = (Toolbar) findViewById(R.id.toolbar);
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         dataList = new ArrayList<>();
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerList = (ListView) findViewById(R.id.left_drawer);
+        drawer = findViewById(R.id.drawer_layout);
+        drawerList = findViewById(R.id.left_drawer);
         fillDrawerListView();
         setOnDrawerItemClick();
         fontManager = new FontManager(getApplicationContext());

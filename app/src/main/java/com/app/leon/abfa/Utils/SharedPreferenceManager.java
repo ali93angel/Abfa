@@ -30,10 +30,7 @@ public class SharedPreferenceManager implements ISharedPreferenceManager {
     public boolean CheckIsNotEmpty(String key) {
         if (sharedPreferences == null) {
             return false;
-        } else if (sharedPreferences.getString(key, "").length() < 1) {
-            return false;
-        }
-        return true;
+        } else return sharedPreferences.getString(key, "").length() >= 1;
     }
 
     private void put(String key, int value) {

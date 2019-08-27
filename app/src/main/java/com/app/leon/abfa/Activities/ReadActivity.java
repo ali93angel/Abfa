@@ -12,13 +12,6 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.RelativeSizeSpan;
@@ -33,6 +26,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.leon.abfa.Adapters.ViewPagerAdapter;
 import com.app.leon.abfa.BaseItem.BaseActivity;
@@ -75,6 +75,7 @@ import com.app.leon.abfa.Utils.IGeoTracker;
 import com.app.leon.abfa.Utils.MakeNotification;
 import com.app.leon.abfa.Utils.NetworkHelper;
 import com.app.leon.abfa.Utils.SharedPreferenceManager;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -95,30 +96,13 @@ import static com.app.leon.abfa.Fragments.ReportTotalFragment.state;
 
 public class ReadActivity extends BaseActivity {
     public static boolean focusOnEditText = true, showSerialBox = false;
+    private final int aboveIconCount = 11;
     public List<CounterStateValueKey> counterStateValueKeys;
     public List<Karbari> karbaris = new ArrayList<>();
     public List<ReadingConfig> readingConfigs;
     public List<HighLowConfig> highLowConfigs;
     public ArrayList<OnOffLoad> onOffLoads = new ArrayList<>();
     public ArrayAdapter<String> adapter;
-    private Context context;
-    private List<Integer> spinnerItemSelected = new ArrayList<>();
-    private String[] items;
-    private List<Report> reports;
-    private List<OnOffLoad> registeredOnOffLoads;
-    private final int aboveIconCount = 11;
-    private int[] imageSrc = new int[aboveIconCount];
-    private int[] imageSrcCurrentHighLow;
-    private int themeCounter, currentPage = 0;
-    private int readStatus = 0;
-    private boolean[] currentRead;
-    private boolean isFlashOn = false;
-    private IFlashLightManager flashLightManager;
-    private IGeoTracker geoTracker;
-    private Location lastLocation;
-    private Integer accuracy;
-    private FontManager fontManager;
-    private String theme;
     @BindView(R.id.pager)
     public ViewPager viewPager;
     @BindView(R.id.imageViewHighLowState)
@@ -139,6 +123,23 @@ public class ReadActivity extends BaseActivity {
     ImageView imageViewSearch;
     @BindView(R.id.textViewNumber)
     TextView textViewNumber;
+    private Context context;
+    private List<Integer> spinnerItemSelected = new ArrayList<>();
+    private String[] items;
+    private List<Report> reports;
+    private List<OnOffLoad> registeredOnOffLoads;
+    private int[] imageSrc = new int[aboveIconCount];
+    private int[] imageSrcCurrentHighLow;
+    private int themeCounter, currentPage = 0;
+    private int readStatus = 0;
+    private boolean[] currentRead;
+    private boolean isFlashOn = false;
+    private IFlashLightManager flashLightManager;
+    private IGeoTracker geoTracker;
+    private Location lastLocation;
+    private Integer accuracy;
+    private FontManager fontManager;
+    private String theme;
     private ViewPagerAdapter pagerAdapter;
 
     @Override
@@ -272,7 +273,7 @@ public class ReadActivity extends BaseActivity {
                 new Thread(new Runnable() {
                     public void run() {
                         showSerialBox = false;
-                        final String number = String.valueOf(position + 1) + "/" + String.valueOf(onOffLoads.size());
+                        final String number = (position + 1) + "/" + onOffLoads.size();
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -531,7 +532,7 @@ public class ReadActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -617,14 +618,6 @@ public class ReadActivity extends BaseActivity {
             }
         }
         UpdateReportByState(reports, OffloadStateEnum.SENT.getValue());
-    }
-
-    class UploadRead
-            implements ICallback<ArrayList<UploadReadFeedback>> {
-        @Override
-        public void execute(ArrayList<UploadReadFeedback> uploadReadFeedback) {
-            readHandel(uploadReadFeedback);
-        }
     }
 
     public void zeroUse(OnOffLoad onOffLoad, int counterStatePosition, int counterStateCode, int number) {
@@ -762,6 +755,49 @@ public class ReadActivity extends BaseActivity {
         }
     }
 
+    public void setOnOffloads(OnOffLoad onOffLoad) {
+        ((ReadActivity) (context)).onOffLoads.set(
+                ((ReadActivity) (context)).viewPager.getCurrentItem(), onOffLoad);
+    }
+
+    public int getCurrentPosition() {
+        return ((ReadActivity) (context)).viewPager.getCurrentItem();
+    }
+
+    private void GpsEnabled() {
+        LocationManager service = (LocationManager) getSystemService(LOCATION_SERVICE);
+        boolean enabled = service
+                .isProviderEnabled(LocationManager.GPS_PROVIDER);
+        Log.e("GPS IS:", enabled + "");
+        if (!enabled) {
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setCancelable(false);
+            alertDialog.setTitle("تنظیمات جی پی اس");
+            // Setting Dialog Message
+            alertDialog.setMessage("مکان یابی شما غیر فعال است ،آیا مایلید به قسمت تنظیمات مکان یابی منتقل شوید");
+            alertDialog.setPositiveButton("تنظیمات", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                }
+            });
+            alertDialog.setNegativeButton("بستن برنامه", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    finishAffinity();
+                }
+            });
+            alertDialog.show();
+        }
+    }
+
+    class UploadRead
+            implements ICallback<ArrayList<UploadReadFeedback>> {
+        @Override
+        public void execute(ArrayList<UploadReadFeedback> uploadReadFeedback) {
+            readHandel(uploadReadFeedback);
+        }
+    }
+
     private class FillReadFragment extends AsyncTask<String, Integer, String> {
         ProgressDialog progressDialog;
         Context context;
@@ -823,7 +859,7 @@ public class ReadActivity extends BaseActivity {
             if (onOffLoads.size() > 0) {
                 if (pagerAdapter != null)
                     viewPager.setAdapter(pagerAdapter);
-                textViewNumber.setText("1/" + String.valueOf(onOffLoads.size()));
+                textViewNumber.setText("1/" + onOffLoads.size());
 //                if (adapter != null)
 //                    spinnerRead.setAdapter(adapter);
 //
@@ -851,41 +887,6 @@ public class ReadActivity extends BaseActivity {
             viewPager.setOffscreenPageLimit(0);
             viewPager.setCurrentItem(currentPage);
             progressDialog.dismiss();
-        }
-    }
-
-    public void setOnOffloads(OnOffLoad onOffLoad) {
-        ((ReadActivity) (context)).onOffLoads.set(
-                ((ReadActivity) (context)).viewPager.getCurrentItem(), onOffLoad);
-    }
-
-    public int getCurrentPosition() {
-        return ((ReadActivity) (context)).viewPager.getCurrentItem();
-    }
-
-    private void GpsEnabled() {
-        LocationManager service = (LocationManager) getSystemService(LOCATION_SERVICE);
-        boolean enabled = service
-                .isProviderEnabled(LocationManager.GPS_PROVIDER);
-        Log.e("GPS IS:", enabled + "");
-        if (!enabled) {
-            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-            alertDialog.setCancelable(false);
-            alertDialog.setTitle("تنظیمات جی پی اس");
-            // Setting Dialog Message
-            alertDialog.setMessage("مکان یابی شما غیر فعال است ،آیا مایلید به قسمت تنظیمات مکان یابی منتقل شوید");
-            alertDialog.setPositiveButton("تنظیمات", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                    startActivity(intent);
-                }
-            });
-            alertDialog.setNegativeButton("بستن برنامه", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    finishAffinity();
-                }
-            });
-            alertDialog.show();
         }
     }
 }

@@ -1,12 +1,14 @@
 package com.app.leon.abfa.Fragments;
+
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.app.leon.abfa.Activities.ReadActivity;
 import com.app.leon.abfa.Models.DbTables.OnOffLoad;
@@ -47,6 +49,7 @@ public class HighFragment extends DialogFragment {
         highFragment.setArguments(bundle);
         return highFragment;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

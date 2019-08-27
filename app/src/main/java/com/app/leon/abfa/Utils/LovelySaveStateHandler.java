@@ -19,6 +19,14 @@ public class LovelySaveStateHandler {
         handledDialogs = new SparseArray<>();
     }
 
+    public static boolean wasDialogOnScreen(Bundle savedInstanceState) {
+        return savedInstanceState.keySet().contains(KEY_DIALOG_ID);
+    }
+
+    public static int getSavedDialogId(Bundle savedInstanceState) {
+        return savedInstanceState.getInt(KEY_DIALOG_ID, -1);
+    }
+
     public void saveInstanceState(Bundle outState) {
         for (int index = handledDialogs.size() - 1; index >= 0; index--) {
             WeakReference<AbsLovelyDialog<?>> dialogRef = handledDialogs.valueAt(index);
@@ -37,13 +45,5 @@ public class LovelySaveStateHandler {
 
     void handleDialogStateSave(int id, AbsLovelyDialog<?> dialog) {
         handledDialogs.put(id, new WeakReference<AbsLovelyDialog<?>>(dialog));
-    }
-
-    public static boolean wasDialogOnScreen(Bundle savedInstanceState) {
-        return savedInstanceState.keySet().contains(KEY_DIALOG_ID);
-    }
-
-    public static int getSavedDialogId(Bundle savedInstanceState) {
-        return savedInstanceState.getInt(KEY_DIALOG_ID, -1);
     }
 }

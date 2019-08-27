@@ -1,14 +1,13 @@
 package com.app.leon.abfa.Activities;
 
-
 import android.content.Context;
 import android.graphics.Color;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.leon.abfa.Adapters.ViewPagerAdapterTab;
 import com.app.leon.abfa.BaseItem.BaseActivity;
@@ -20,6 +19,7 @@ import com.app.leon.abfa.R;
 import com.app.leon.abfa.Utils.DepthPageTransformer;
 import com.app.leon.abfa.Utils.ISharedPreferenceManager;
 import com.app.leon.abfa.Utils.SharedPreferenceManager;
+import com.google.android.material.snackbar.Snackbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,7 +44,7 @@ public class DownloadActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

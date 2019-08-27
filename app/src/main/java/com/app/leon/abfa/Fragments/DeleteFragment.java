@@ -2,7 +2,6 @@ package com.app.leon.abfa.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,8 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.app.leon.abfa.DBService.ReadingConfigService;
 import com.app.leon.abfa.Models.Enums.SharedReferenceKeys;

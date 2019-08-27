@@ -22,10 +22,7 @@ public class ConnectingManager {
 
     public boolean isWifiOn() {
         WifiManager wifi = (WifiManager) context.getSystemService(WIFI_SERVICE);
-        if (wifi.isWifiEnabled()) {
-            return true;
-        }
-        return false;
+        return wifi.isWifiEnabled();
     }
 
     public boolean checkMobileDataIsOn() {

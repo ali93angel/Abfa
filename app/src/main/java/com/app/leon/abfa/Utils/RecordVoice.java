@@ -27,9 +27,15 @@ public final class RecordVoice {
     private MediaRecorder Recorder = null;
 
     public RecordVoice(Context context) {
-        this.context = context;
+        RecordVoice.context = context;
         FileName = context.getExternalCacheDir().getAbsolutePath() + "/AbfaAudioRecord" +
                 new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".amr";
+    }
+
+    public static MultipartBody.Part prepareVoiceToSend(File file) {
+        RequestBody requestFile = RequestBody.create(MediaType.parse(("multipart/form-data")), file);
+        MultipartBody.Part body = MultipartBody.Part.createFormData("voice", file.getName(), requestFile);
+        return body;
     }
 
     public String getFileName() {
@@ -39,11 +45,7 @@ public final class RecordVoice {
     public void setFileName(String fileName) {
         FileName = fileName;
     }
-    public static MultipartBody.Part prepareVoiceToSend(File file) {
-        RequestBody requestFile = RequestBody.create(MediaType.parse(("multipart/form-data")), file);
-        MultipartBody.Part body = MultipartBody.Part.createFormData("voice", file.getName(), requestFile);
-        return body;
-    }
+
     public File getFile() {
         File mediaStorageDir = new File(FileName);
         if (!mediaStorageDir.exists()) {

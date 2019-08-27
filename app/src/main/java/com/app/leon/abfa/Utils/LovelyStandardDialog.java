@@ -1,12 +1,13 @@
 package com.app.leon.abfa.Utils;
 
 import android.content.Context;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import com.app.leon.abfa.R;
 
@@ -27,6 +28,12 @@ public class LovelyStandardDialog extends AbsLovelyDialog<LovelyStandardDialog> 
     private Button neutralButton;
     private Context context;
 
+    {
+        positiveButton = findView(R.id.ld_btn_yes);
+        negativeButton = findView(R.id.ld_btn_no);
+        neutralButton = findView(R.id.ld_btn_neutral);
+    }
+
     public LovelyStandardDialog(Context context) {
         super(context);
         this.context = context;
@@ -36,12 +43,6 @@ public class LovelyStandardDialog extends AbsLovelyDialog<LovelyStandardDialog> 
     public LovelyStandardDialog(Context context, int theme) {
         super(context, theme);
         this.context = context;
-    }
-
-    {
-        positiveButton = findView(R.id.ld_btn_yes);
-        negativeButton = findView(R.id.ld_btn_no);
-        neutralButton = findView(R.id.ld_btn_neutral);
     }
 
     public LovelyStandardDialog setPositiveButton(@StringRes int text, View.OnClickListener listener) {

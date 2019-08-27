@@ -23,10 +23,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_mid_margin"
             android:layout_marginLeft="@dimen/activity_large_margin"
-            android:layout_marginRight="@dimen/activity_large_margin"
             android:layout_marginTop="@dimen/activity_mid_margin"
+            android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_marginBottom="@dimen/activity_mid_margin"
             android:background="@drawable/border_"
             android:orientation="horizontal">
 
@@ -51,9 +51,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_mid_margin"
             android:layout_marginLeft="@dimen/activity_large_margin"
             android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_marginBottom="@dimen/activity_mid_margin"
             android:background="@drawable/border_"
             android:orientation="horizontal">
 

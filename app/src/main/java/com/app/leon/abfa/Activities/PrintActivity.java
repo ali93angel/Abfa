@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.leon.abfa.Infrastructure.EscapeSequence;
 import com.app.leon.abfa.Infrastructure.PrintTwoColumns;
@@ -46,12 +47,6 @@ public class PrintActivity extends AppCompatActivity
     private static final int REQUEST_CODE_BLUETOOTH = 1;
     private static final String DEVICE_ADDRESS_START = " (";
     private static final String DEVICE_ADDRESS_END = ")";
-    private ArrayList<CharSequence> bondedDevices = new ArrayList<>();
-    private ArrayAdapter<CharSequence> arrayAdapter;
-    private BXLConfigLoader bxlConfigLoader;
-    private POSPrinter posPrinter;
-    private String logicalName;
-    private FontManager fontManager;
     View view;
     String theme = "1";
     SharedPreferenceManager sharedPreferenceManager;
@@ -68,6 +63,12 @@ public class PrintActivity extends AppCompatActivity
     Spinner spinnerEscapeSequences;
     @BindView(R.id.listViewPairedDevices)
     ListView listViewPairedDevice;
+    private ArrayList<CharSequence> bondedDevices = new ArrayList<>();
+    private ArrayAdapter<CharSequence> arrayAdapter;
+    private BXLConfigLoader bxlConfigLoader;
+    private POSPrinter posPrinter;
+    private String logicalName;
+    private FontManager fontManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

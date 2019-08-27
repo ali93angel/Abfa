@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +18,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.leon.abfa.DBService.QeireMojazService;
 import com.app.leon.abfa.Fragments.ReadFragment;
@@ -207,8 +208,8 @@ public class ReportForbidActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                takePhoto.file = Uri.fromFile(getOutputMediaFile());
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, takePhoto.file);
+                TakePhoto.file = Uri.fromFile(getOutputMediaFile());
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, TakePhoto.file);
                 startActivityForResult(intent, 100);
             }
         });

@@ -64,11 +64,11 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nextFocusDown="@+id/editText4"
-                    android:nextFocusForward="@+id/editText4"
                     android:nextFocusLeft="@+id/editText4"
                     android:nextFocusRight="@+id/editText4"
                     android:nextFocusUp="@+id/editText4"
+                    android:nextFocusDown="@+id/editText4"
+                    android:nextFocusForward="@+id/editText4"
                     android:padding="@dimen/activity_medium_padding" />
             </LinearLayout>
 
@@ -97,11 +97,11 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nextFocusDown="@+id/editText1"
-                    android:nextFocusForward="@+id/editText1"
                     android:nextFocusLeft="@+id/editText1"
                     android:nextFocusRight="@+id/editText1"
                     android:nextFocusUp="@+id/editText1"
+                    android:nextFocusDown="@+id/editText1"
+                    android:nextFocusForward="@+id/editText1"
                     android:padding="@dimen/activity_medium_padding" />
             </LinearLayout>
         </LinearLayout>
@@ -173,11 +173,11 @@
                     android:inputType="number"
                     android:maxLength="2"
                     android:maxLines="1"
-                    android:nextFocusDown="@+id/editText3"
-                    android:nextFocusForward="@+id/editText3"
                     android:nextFocusLeft="@+id/editText3"
                     android:nextFocusRight="@+id/editText3"
                     android:nextFocusUp="@+id/editText3"
+                    android:nextFocusDown="@+id/editText3"
+                    android:nextFocusForward="@+id/editText3"
                     android:padding="@dimen/activity_medium_padding" />
             </LinearLayout>
         </LinearLayout>
@@ -187,10 +187,10 @@
             style="@style/text_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_medium_margin"
             android:layout_marginLeft="@dimen/activity_large_margin"
-            android:layout_marginRight="@dimen/activity_large_margin"
             android:layout_marginTop="@dimen/activity_medium_margin"
+            android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_marginBottom="@dimen/activity_medium_margin"
             android:background="@drawable/border_orange_"
             android:text="@string/submit"
             android:textColor="@color/white"

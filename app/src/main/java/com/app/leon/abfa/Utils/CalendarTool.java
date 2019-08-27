@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
 
 public class CalendarTool {
 
-    static String iraniWeekDayStr[] = {
+    static String[] iraniWeekDayStr = {
             "دوشنبه",
             "سه شنبه",
             "چهارشنبه",
@@ -124,7 +124,7 @@ public class CalendarTool {
     }
 
     public String getWeekDayStr() {
-        String weekDayStr[] = {
+        String[] weekDayStr = {
                 "دوشنبه",
                 "سه شنبه",
                 "چهارشنبه",
@@ -206,7 +206,7 @@ public class CalendarTool {
 
     private void IranianCalendar() {
         // Iranian years starting the 33-year rule
-        int Breaks[] =
+        int[] Breaks =
                 {-61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181,
                         1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178};
         int jm, N, leapJ, leapG, jp, j, jump;
@@ -243,7 +243,7 @@ public class CalendarTool {
 
     public boolean IsLeap(int irYear1) {
         // Iranian years starting the 33-year rule
-        int Breaks[] =
+        int[] Breaks =
                 {-61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181,
                         1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178};
         int jm, N, leapJ, leapG, jp, j, jump;
@@ -276,10 +276,7 @@ public class CalendarTool {
         leap = (((N + 1) % 33) - 1) % 4;
         if (leap == -1)
             leap = 4;
-        if (leap == 4 || leap == 0)
-            return true;
-        else
-            return false;
+        return leap == 4 || leap == 0;
 
     }
 

@@ -68,6 +68,13 @@ import static com.app.leon.abfa.DBService.UpdateOnOffLoad.UpdateOnOffLoadSend;
 
 
 public class UploadFragment extends BaseFragment {
+    @BindView(R.id.buttonUpload)
+    Button buttonUpload;
+    @BindView(R.id.spinner)
+    Spinner spinner;
+    @BindView(R.id.imageViewUpload)
+    ImageView imageView;
+    Unbinder unbinder;
     private Context context;
     private long onOffLoadManeSize;
     private long onOffLoadUnseenSize;
@@ -79,13 +86,6 @@ public class UploadFragment extends BaseFragment {
     private QeireMojaz qeireMojaz;
     private int type;
     private int[] imageSrc = {R.drawable.img_load_on, R.drawable.img_load_off, R.drawable.img_multimedia};
-    @BindView(R.id.buttonUpload)
-    Button buttonUpload;
-    @BindView(R.id.spinner)
-    Spinner spinner;
-    @BindView(R.id.imageViewUpload)
-    ImageView imageView;
-    Unbinder unbinder;
 
     public static UploadFragment newInstance(int type) {
         UploadFragment uploadFragment = new UploadFragment();
@@ -262,7 +262,7 @@ public class UploadFragment extends BaseFragment {
 
     void goToRead() {
         Toast.makeText(getActivity(),
-                "همکار گرامی تعداد " + String.valueOf(onOffLoadUnseenSize) + " اشتراک قرائت نشده است",
+                "همکار گرامی تعداد " + onOffLoadUnseenSize + " اشتراک قرائت نشده است",
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), ReadActivity.class);
         Bundle bundle = new Bundle();

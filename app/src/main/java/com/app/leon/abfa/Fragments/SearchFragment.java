@@ -6,7 +6,6 @@ import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.text.InputType;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -20,6 +19,8 @@ import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.app.leon.abfa.Activities.ReadActivity;
 import com.app.leon.abfa.Models.DbTables.OnOffLoad;

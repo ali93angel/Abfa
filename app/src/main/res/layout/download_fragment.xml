@@ -20,10 +20,11 @@
             android:id="@+id/imageViewLoad"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
             android:layout_marginLeft="@dimen/activity_medium_margin"
             android:layout_marginRight="@dimen/activity_medium_margin"
+            android:layout_weight="4"
             android:src="@drawable/img_reload" />
+
         <Button
             android:id="@+id/buttonDownload"
             style="@style/text_bold"

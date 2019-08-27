@@ -27,15 +27,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/activity_mid_margin"
             android:layout_marginLeft="@dimen/activity_large_margin"
-            android:layout_marginRight="@dimen/activity_large_margin"
             android:layout_marginTop="@dimen/activity_mid_margin"
+            android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_marginBottom="@dimen/activity_mid_margin"
             android:background="@drawable/border_gray_"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/activity_mid_padding"
-            android:paddingTop="@dimen/activity_mid_padding">
+            android:paddingTop="@dimen/activity_mid_padding"
+            android:paddingBottom="@dimen/activity_mid_padding">
 
             <Spinner
                 android:id="@+id/spinner"
@@ -51,10 +51,10 @@
             style="@style/text_bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_medium_margin"
             android:layout_marginLeft="@dimen/activity_large_margin"
-            android:layout_marginRight="@dimen/activity_large_margin"
             android:layout_marginTop="@dimen/activity_medium_margin"
+            android:layout_marginRight="@dimen/activity_large_margin"
+            android:layout_marginBottom="@dimen/activity_medium_margin"
             android:background="@drawable/border_orange_"
             android:text="حذف"
             android:textColor="@color/white"

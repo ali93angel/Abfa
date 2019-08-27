@@ -62,7 +62,7 @@ public class ReadSettingFragment extends BaseFragment {
             readingConfigs = ReadingConfigService.getReadingConfigsNoArchive(false);
             listItems = new String[readingConfigs.size()];
             for (ReadingConfig readingConfig : readingConfigs) {
-                listItems[counter] = String.valueOf(readingConfig.getTrackNumber()) + "*" +
+                listItems[counter] = readingConfig.getTrackNumber() + "*" +
                         readingConfig.getListNumber();
                 counter++;
             }
@@ -72,7 +72,7 @@ public class ReadSettingFragment extends BaseFragment {
                     @Override
                     public View getView(int position, View convertView, ViewGroup parent) {
                         View view = super.getView(position, convertView, parent);
-                        final CheckedTextView textView = (CheckedTextView) view
+                        final CheckedTextView textView = view
                                 .findViewById(android.R.id.text1);
                         Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "font/BYekan_3.ttf");
                         textView.setTypeface(typeface);

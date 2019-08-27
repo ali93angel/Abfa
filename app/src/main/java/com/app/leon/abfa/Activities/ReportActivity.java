@@ -4,12 +4,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.leon.abfa.Adapters.ViewPagerAdapterTab;
 import com.app.leon.abfa.BaseItem.BaseActivity;
@@ -24,6 +24,7 @@ import com.app.leon.abfa.Models.ViewModels.UiElementInActivity;
 import com.app.leon.abfa.R;
 import com.app.leon.abfa.Utils.DepthPageTransformer;
 import com.app.leon.abfa.Utils.SharedPreferenceManager;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +39,11 @@ import static com.app.leon.abfa.Infrastructure.DifferentCompanyManager.getActive
 
 public class ReportActivity extends BaseActivity {
     public static long onOffLoadSize;
-    public Context context;
     public static long onOffLoadsStandard = 0, onOffLoadsHigh = 0, onOffLoadsLow = 0,
             onOffLoadsZero = 0, notRead = 0, allIsMane = 0;
     public static int selected;
     public static List<CounterStateValueKey> counterStateValueKeys = new ArrayList<>();
+    public Context context;
     @BindView(R.id.textViewTotal)
     TextView textViewTotal;
     @BindView(R.id.textViewNotRead)
@@ -57,7 +58,7 @@ public class ReportActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

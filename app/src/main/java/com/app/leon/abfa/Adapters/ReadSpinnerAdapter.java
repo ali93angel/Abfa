@@ -31,7 +31,7 @@ public class ReadSpinnerAdapter extends ArrayAdapter<RowItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         RowItem rowItem = getItem(position);
         View rowView = flater.inflate(R.layout.item_read_spinner, null, true);
-        TextView textViewItem = (TextView) rowView.findViewById(R.id.title);
+        TextView textViewItem = rowView.findViewById(R.id.title);
         textViewItem.setText(rowItem.getTitle());
         Typeface externalFont = Typeface.createFromAsset(context.getAssets(), "font/BYekan_3.ttf");
         textViewItem.setTypeface(externalFont);
@@ -57,7 +57,7 @@ public class ReadSpinnerAdapter extends ArrayAdapter<RowItem> {
             holder = new viewHolder();
             flater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             rowView = flater.inflate(R.layout.item_read_spinner, null, false);
-            holder.textViewTitle = (TextView) rowView.findViewById(R.id.title);
+            holder.textViewTitle = rowView.findViewById(R.id.title);
             Typeface externalFont = Typeface.createFromAsset(context.getAssets(), "font/BYekan_3.ttf");
             holder.textViewTitle.setTypeface(externalFont);
             holder.textViewTitle.setTextSize(context.getResources().getDimension(R.dimen.textSizeSmall));

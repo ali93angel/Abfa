@@ -71,6 +71,7 @@
     <string name="theme_change">تغییر پوسته</string>
     <string name="file_downloaded">فایل برنامه دانلود شد، به مدیریت فایل مراجعه کنید</string>
     <string name="copy_right">copyright 2017 by H.G.K co</string>
+    <string name="app_version">1.1.0.1</string>
     <string name="zero_use">مصرف صفر است. آیا اطمینان دارید؟</string>
     <string name="high_use">رقم وارد شده بالاتر از میانگین بلند مدت است. آیا از رقم وارد شده اطمینان دارید؟</string>
     <string name="low_use">رقم وارد شده پایین تر از میانگین بلند مدت است. آیا از رقم وارد شده اطمینان دارید؟</string>

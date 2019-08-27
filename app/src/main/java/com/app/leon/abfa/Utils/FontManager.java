@@ -17,8 +17,8 @@ import java.util.Stack;
  */
 
 public class FontManager {
-    private Typeface typeface;
     Context context;
+    private Typeface typeface;
     private String fontName = "font/BYekan_3.ttf";
 
     public FontManager(Context context) {
@@ -58,6 +58,7 @@ public class FontManager {
     public void setFont(SpannableString spannableString) {
         spannableString.setSpan(typeface, 0, spannableString.length(), 0);
     }
+
     public void setFont(View view) {
         ((TextView) view).setTypeface(typeface);
     }

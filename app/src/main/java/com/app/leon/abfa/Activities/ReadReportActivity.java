@@ -2,8 +2,6 @@ package com.app.leon.abfa.Activities;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -12,6 +10,9 @@ import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.app.leon.abfa.DBService.ReportService;
 import com.app.leon.abfa.DBService.ReportValueKeyService;
@@ -43,11 +44,11 @@ public class ReadReportActivity extends AppCompatActivity {
     Button buttonSubmit;
     @BindView(R.id.reports_activity)
     RelativeLayout relativeLayout;
+    FontManager fontManager;
     private String[] listItems;
     private SharedPreferenceManager sharedPreferenceManager;
     private String theme = "1";
     private List<Report> reports;
-    FontManager fontManager;
 
     public static void UpdateOnOffLoadByKarbari(int karbari) {
         UpdateOnOffLoad.updateOnOffLoadByKarbari(karbari, bill_Id, trackNumber);
@@ -142,7 +143,7 @@ public class ReadReportActivity extends AppCompatActivity {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
-                final CheckedTextView textView = (CheckedTextView) view
+                final CheckedTextView textView = view
                         .findViewById(android.R.id.text1);
                 Typeface typeface = Typeface.createFromAsset(getAssets(), "font/BYekan_3.ttf");
                 textView.setTypeface(typeface);

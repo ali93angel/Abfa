@@ -4,16 +4,16 @@
     <!-- Base application theme. -->
     <style name="AppTheme.GreenBlue" parent="Theme.AppCompat.Light.DarkActionBar">
 
-    <item name="colorPrimary">@color/blue3</item>
-    <item name="colorPrimaryDark">@color/green2</item>
-    <item name="colorAccent">@color/yellow1</item>
-    <item name="android:textColor">@color/white</item>
-    <item name="android:windowBackground">@color/white</item>
-    <item name="android:colorBackground">@color/white</item>
-    <item name="actionBarStyle">@style/MyActionBar</item>
-    <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
-    <item name="android:itemBackground">?attr/colorPrimaryDark</item>
-</style>
+        <item name="colorPrimary">@color/blue3</item>
+        <item name="colorPrimaryDark">@color/green2</item>
+        <item name="colorAccent">@color/yellow1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
+        <item name="android:itemBackground">?attr/colorPrimaryDark</item>
+    </style>
 
     <style name="AppTheme.DarkGrey" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryDarkGrey</item>

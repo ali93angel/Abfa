@@ -56,20 +56,12 @@ public class SettingUpdateFragment extends BaseFragment {
     SharedPreferenceManager sharedPreferenceManager;
     Unbinder unbinder;
 
-    class ApkInfoFeedBack implements ICallback<AppInfo> {
-        @Override
-        public void execute(AppInfo appInfo) {
-            setTextView(appInfo);
-        }
-    }
-
     @Override
     public View FragmentView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.setting_update_fragment, parent, false);
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
-
 
     @Override
     public void initialize() {
@@ -122,14 +114,6 @@ public class SettingUpdateFragment extends BaseFragment {
         textViewVersion.setText(appInfo.getVersionName());
     }
 
-    class ApkDownload
-            implements ICallback<ResponseBody> {
-        @Override
-        public void execute(ResponseBody responseBody) {
-            writeResponseBodyToDisk(responseBody);
-        }
-    }
-
     boolean writeResponseBodyToDisk(ResponseBody body) {
         try {
             String root = Environment.getExternalStorageDirectory().toString();
@@ -151,7 +135,7 @@ public class SettingUpdateFragment extends BaseFragment {
                     outputStream.write(fileReader, 0, read);
                     fileSizeDownloaded += read;
                     progressDialogDownloading.setMessage(".apk file :" + "file download: " +
-                            String.valueOf(fileSizeDownloaded) + " of " + String.valueOf(fileSize));
+                            fileSizeDownloaded + " of " + fileSize);
                     Log.d(".apk file", "file download: " + fileSizeDownloaded + " of " + fileSize);
                 }
                 outputStream.flush();
@@ -189,5 +173,20 @@ public class SettingUpdateFragment extends BaseFragment {
     public void onDestroy() {
         super.onDestroy();
         context = null;
+    }
+
+    class ApkInfoFeedBack implements ICallback<AppInfo> {
+        @Override
+        public void execute(AppInfo appInfo) {
+            setTextView(appInfo);
+        }
+    }
+
+    class ApkDownload
+            implements ICallback<ResponseBody> {
+        @Override
+        public void execute(ResponseBody responseBody) {
+            writeResponseBodyToDisk(responseBody);
+        }
     }
 }

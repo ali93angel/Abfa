@@ -29,7 +29,7 @@ public abstract class BaseFragmentDialog extends DialogFragment {
         getActivity().getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         view = FragmentDialogView(inflater, parent, savedInstanseState);
         typeface = Typeface.createFromAsset(getActivity().getAssets(), "font/BYekan_3.ttf");
-        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.fragmentFrameLayout);
+        FrameLayout frameLayout = view.findViewById(R.id.fragmentFrameLayout);
         setFont(frameLayout, typeface);
         initialize();
         return view;

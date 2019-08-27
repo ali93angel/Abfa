@@ -3,7 +3,6 @@ package com.app.leon.abfa.Activities;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.leon.abfa.DBService.MultimediaService;
 import com.app.leon.abfa.Infrastructure.IAbfaService;
@@ -152,7 +153,7 @@ public class DescriptionActivity extends AppCompatActivity
         multimediaAudioList = MultimediaService.getMultimediaData(bill_Id, MultimediaTypeEnum.AUDIO.getValue());
         if (multimediaAudioList.size() > 0) {
             MultimediaData multimediaData = multimediaAudioList.get(0);
-            recordVoice.FileName = multimediaData.getPath();
+            RecordVoice.FileName = multimediaData.getPath();
             if (!multimediaData.isSent())
                 buttonSend.setEnabled(true);
             buttonSend.setEnabled(false);
@@ -168,7 +169,7 @@ public class DescriptionActivity extends AppCompatActivity
             public void onClick(View view) {
                 if (hasVoice)
                     multimediaData = MultimediaService.addMultimedia(Integer.valueOf(MultimediaTypeEnum.AUDIO.getValue()),
-                            bill_Id, trackNumber, recordVoice.FileName);
+                            bill_Id, trackNumber, RecordVoice.FileName);
                 if (editTextMessage.getText().toString().length() > 0) {
                     descriptionText = editTextMessage.getText().toString();
                     updateOnOffLoadByDescription(bill_Id, trackNumber, descriptionText);
@@ -227,7 +228,7 @@ public class DescriptionActivity extends AppCompatActivity
                             seekBarMediaPlayer.setProgress((int) startTime[0]);
                             myHandler.postDelayed(this, 100);
                             if (startTime[0] == finalTime[0]) {
-                                final ImageView imageView = (ImageView) findViewById(R.id.imageViewP);
+                                final ImageView imageView = findViewById(R.id.imageViewP);
                                 imageView.setImageResource(R.drawable.img_pause);
                                 play = false;
 

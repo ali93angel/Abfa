@@ -7,8 +7,9 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Vibrator;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 /**
  * Created by Leon on 1/13/2018.
@@ -31,8 +32,8 @@ public class MakeNotification {
     }
 
     public static void makeAboveNotification(Context context, Class aClass,
-                                       String actionName, String title, String text, String actionTitle,
-                                       int smallIcon, int actionIcon) {
+                                             String actionName, String title, String text, String actionTitle,
+                                             int smallIcon, int actionIcon) {
         Intent intent = new Intent(context, aClass);
         intent.setAction(actionName);
         PendingIntent pendingIntent = PendingIntent.getService(context, (int) System.currentTimeMillis(), intent, PendingIntent.FLAG_CANCEL_CURRENT);

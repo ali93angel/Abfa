@@ -47,13 +47,6 @@ public class SettingChangePasswordFragment extends BaseFragment {
                 getString(R.string.error), getString(R.string.accepted));
     }
 
-    class ChangePassword implements ICallback<SimpleMessage> {
-        @Override
-        public void execute(SimpleMessage simpleMessage) {
-            showMessage(simpleMessage.getMessage());
-        }
-    }
-
     @Override
     public View FragmentView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.setting_change_password_fragment, parent, false);
@@ -121,5 +114,12 @@ public class SettingChangePasswordFragment extends BaseFragment {
         context = getActivity();
         sharedPreferenceManager = new SharedPreferenceManager(context);
         setButtonChangePasswordOnClickListener();
+    }
+
+    class ChangePassword implements ICallback<SimpleMessage> {
+        @Override
+        public void execute(SimpleMessage simpleMessage) {
+            showMessage(simpleMessage.getMessage());
+        }
     }
 }
